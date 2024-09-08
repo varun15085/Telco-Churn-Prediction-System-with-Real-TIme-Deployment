@@ -1,0 +1,184 @@
+<html>
+<body>
+    <div class="login">
+        <h1>Customer Churn Prediction</h1>
+        <form action="{{ url_for('predict_datapoint')}}" method="post">
+            <h1>
+                <legend>Customer Churn Prediction</legend>
+            </h1>
+            <div class="mb-3">
+                <label class="form-label">Gender</label>
+                <select class="form-control" name="gender" required>
+                    <option selected disabled value="">Select your Gender</option>
+                    <option value="Female">Female</option>
+                    <option value="Male">Male</option>
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Senior Citizen</label>
+                <input class="form-control" type="number" name="SeniorCitizen" placeholder="Enter 0 or 1" min="0" max="1" required />
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Partner</label>
+                <select class="form-control" name="Partner" required>
+                    <option selected disabled value="">Select Partner Status</option>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Dependents</label>
+                <select class="form-control" name="Dependents" required>
+                    <option selected disabled value="">Select Dependents Status</option>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Tenure</label>
+                <input class="form-control" type="number" name="tenure" placeholder="Enter tenure in months" min="0" required />
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Phone Service</label>
+                <select class="form-control" name="PhoneService" required>
+                    <option selected disabled value="">Select Phone Service</option>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Multiple Lines</label>
+                <select class="form-control" name="MultipleLines" required>
+                    <option selected disabled value="">Select Multiple Lines</option>
+                    <option value="No phone service">No phone service</option>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Internet Service</label>
+                <select class="form-control" name="InternetService" required>
+                    <option selected disabled value="">Select Internet Service</option>
+                    <option value="DSL">DSL</option>
+                    <option value="Fiber optic">Fiber optic</option>
+                    <option value="No">No</option>
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Online Security</label>
+                <select class="form-control" name="OnlineSecurity" required>
+                    <option selected disabled value="">Select Online Security</option>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                    <option value="No internet service">No internet service</option>
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Online Backup</label>
+                <select class="form-control" name="OnlineBackup" required>
+                    <option selected disabled value="">Select Online Backup</option>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                    <option value="No internet service">No internet service</option>
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Device Protection</label>
+                <select class="form-control" name="DeviceProtection" required>
+                    <option selected disabled value="">Select Device Protection</option>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                    <option value="No internet service">No internet service</option>
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Tech Support</label>
+                <select class="form-control" name="TechSupport" required>
+                    <option selected disabled value="">Select Tech Support</option>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                    <option value="No internet service">No internet service</option>
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Streaming TV</label>
+                <select class="form-control" name="StreamingTV" required>
+                    <option selected disabled value="">Select Streaming TV</option>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                    <option value="No internet service">No internet service</option>
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Streaming Movies</label>
+                <select class="form-control" name="StreamingMovies" required>
+                    <option selected disabled value="">Select Streaming Movies</option>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                    <option value="No internet service">No internet service</option>
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Contract</label>
+                <select class="form-control" name="Contract" required>
+                    <option selected disabled value="">Select Contract Type</option>
+                    <option value="Month-to-month">Month-to-month</option>
+                    <option value="One year">One year</option>
+                    <option value="Two year">Two year</option>
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Paperless Billing</label>
+                <select class="form-control" name="PaperlessBilling" required>
+                    <option selected disabled value="">Select Paperless Billing</option>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Payment Method</label>
+                <select class="form-control" name="PaymentMethod" required>
+                    <option selected disabled value="">Select Payment Method</option>
+                    <option value="Electronic check">Electronic check</option>
+                    <option value="Mailed check">Mailed check</option>
+                    <option value="Bank transfer (automatic)">Bank transfer (automatic)</option>
+                    <option value="Credit card (automatic)">Credit card (automatic)</option>
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Monthly Charges</label>
+                <input class="form-control" type="number" name="MonthlyCharges" placeholder="Enter Monthly Charges" step="0.01" required />
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Total Charges</label>
+                <input class="form-control" type="number" name="TotalCharges" placeholder="Enter Total Charges" step="0.01" required />
+            </div>
+
+            <div class="mb-3">
+                <input class="btn btn-primary" type="submit" value="Predict Churn" />
+            </div>
+        </form>
+        <h2>
+            The prediction is {{results}}
+        </h2>
+    </div>
+</body>
+</html>
